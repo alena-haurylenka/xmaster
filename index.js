@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => res.render('pages/index'));
 app.get('/index', (req, res) => res.render('pages/index'));
 app.get('/contacts', (req, res) => res.render('pages/contacts'));
-app.get('/services-and-prices', (req, res) => res.render('pages/services-and-prices'));
+app.get('/prices', (req, res) => res.render('pages/prices'));
 app.get('/photogallery', (req, res) => res.render('pages/photogallery'));
 app.get('/discounts', (req, res) => res.render('pages/discounts'));
 // .get('/db', (req, res) => res.render('pages/db'))
