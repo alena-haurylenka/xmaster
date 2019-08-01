@@ -45,5 +45,6 @@ app.get('/contacts', (req, res) => res.render('pages/contacts'));
 app.get('/prices', (req, res) => res.render('pages/prices'));
 app.get('/photogallery', (req, res) => res.render('pages/photogallery'));
 app.get('/discounts', (req, res) => res.render('pages/discounts'));
+app.get('*', (req, res) => res.send('<h2>Page does not exist</h2>'));
 // .get('/db', (req, res) => res.render('pages/db'))
 app.listen(PORT, () => console.log(`App is running at http://localhost:${ PORT }`));
