@@ -31,10 +31,9 @@ app.engine('.hbs', exphbs({
     defaultLayout: 'main',
     partialsDir: "views/partials/",
     // Specify helpers which are only registered on this instance.
-    /*helpers: {
-        foo: function () { return 'FOO!'; },
-        bar: function () { return 'BAR!'; }
-    }*/
+    helpers: {
+        currentYear: function () { return new Date().getFullYear(); }
+    }
 }));
 app.set('view engine', '.hbs');
 
