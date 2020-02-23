@@ -1,28 +1,7 @@
-/*
-const express = require('express');
-const path = require('path');
-const exphbs  = require('express-handlebars');
-const PORT = process.env.PORT || 5000;
-
-
-
-express()
-    .use(express.static(path.join(__dirname, 'public')))
-    .set('views', path.join(__dirname, 'views'))
-    .set('view engine', 'ejs')
-    .get('/', (req, res) => res.render('pages/index'))
-    .get('/index', (req, res) => res.render('pages/index'))
-    .get('/contacts', (req, res) => res.render('pages/contacts'))
-    .get('/services-and-prices', (req, res) => res.render('pages/services-and-prices'))
-    .get('/photogallery', (req, res) => res.render('pages/photogallery'))
-    .get('/discounts', (req, res) => res.render('pages/discounts'))
-    .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-*/
-
 const express = require('express')
 const exphbs  = require('express-handlebars');
-const path = require('path')
-const PORT = process.env.PORT || 5000
+const path = require('path');
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
@@ -30,7 +9,6 @@ app.engine('.hbs', exphbs({
     extname: '.hbs',
     defaultLayout: 'main',
     partialsDir: "views/partials/",
-    // Specify helpers which are only registered on this instance.
     helpers: {
         currentYear: function () { return new Date().getFullYear(); }
     }
